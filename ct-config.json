@@ -1,0 +1,27 @@
+Use these credentials to access the project via API:
+commercetools-pet-project
+
+project_key
+commercetools-pet-project
+
+client_id
+MBgQGB8UymTB7j7UX4_EPs34
+
+secret
+2NgHkyEQ86H9xgpiqZ8iGcsaqSlhUxto
+
+scope
+view_standalone_prices:commercetools-pet-project view_shipping_methods:commercetools-pet-project view_staged_quotes:commercetools-pet-project view_connectors_deployments:commercetools-pet-project view_categories:commercetools-pet-project view_key_value_documents:commercetools-pet-project view_payments:commercetools-pet-project view_product_selections:commercetools-pet-project view_products:commercetools-pet-project view_states:commercetools-pet-project view_import_containers:commercetools-pet-project view_cart_discounts:commercetools-pet-project view_quotes:commercetools-pet-project view_shopping_lists:commercetools-pet-project view_audit_log:commercetools-pet-project view_orders:commercetools-pet-project view_business_units:commercetools-pet-project view_types:commercetools-pet-project view_published_products:commercetools-pet-project view_customer_groups:commercetools-pet-project view_messages:commercetools-pet-project view_attribute_groups:commercetools-pet-project view_customers:commercetools-pet-project view_quote_requests:commercetools-pet-project view_order_edits:commercetools-pet-project view_associate_roles:commercetools-pet-project view_project_settings:commercetools-pet-project view_tax_categories:commercetools-pet-project view_stores:commercetools-pet-project view_discount_codes:commercetools-pet-project view_connectors:commercetools-pet-project
+
+API URL
+https://api.eu-central-1.aws.commercetools.com
+
+Auth URL
+https://auth.eu-central-1.aws.commercetools.com
+
+
+curl https://auth.eu-central-1.aws.commercetools.com/oauth/token \
+--basic --user "MBgQGB8UymTB7j7UX4_EPs34:2NgHkyEQ86H9xgpiqZ8iGcsaqSlhUxto" \
+-X POST \
+-d "grant_type=client_credentials&scope=view_standalone_prices:commercetools-pet-project view_shipping_methods:commercetools-pet-project view_staged_quotes:commercetools-pet-project view_connectors_deployments:commercetools-pet-project view_categories:commercetools-pet-project view_key_value_documents:commercetools-pet-project view_payments:commercetools-pet-project view_product_selections:commercetools-pet-project view_products:commercetools-pet-project view_states:commercetools-pet-project view_import_containers:commercetools-pet-project view_cart_discounts:commercetools-pet-project view_quotes:commercetools-pet-project view_shopping_lists:commercetools-pet-project view_audit_log:commercetools-pet-project view_orders:commercetools-pet-project view_business_units:commercetools-pet-project view_types:commercetools-pet-project view_published_products:commercetools-pet-project view_customer_groups:commercetools-pet-project view_messages:commercetools-pet-project view_attribute_groups:commercetools-pet-project view_customers:commercetools-pet-project view_quote_requests:commercetools-pet-project view_order_edits:commercetools-pet-project view_associate_roles:commercetools-pet-project view_project_settings:commercetools-pet-project view_tax_categories:commercetools-pet-project view_stores:commercetools-pet-project view_discount_codes:commercetools-pet-project view_connectors:commercetools-pet-project"
+
