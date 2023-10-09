@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {getProducts} from "./../../services/search";
-import {ProductProjectionPagedSearchResponse} from "@commercetools/platform-sdk";
+import {ProductProjectionPagedSearchResponse, type TermFacetResult} from "@commercetools/platform-sdk";
 import {facetDefinitions} from "../../services/search/facetDefinitions";
 
 
@@ -67,12 +67,12 @@ export default function Products() {
             <div>
                 <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top'}}>
                     {Object.keys(productsResult?.facets ?? {})?.filter(
-                        (facetKey) => productsResult?.facets?.[facetKey]?.terms?.length
+                        (facetKey) => (productsResult?.facets?.[facetKey] as TermFacetResult)?.terms?.length
                     ).map((facet, index) => (
                         <div key={facet}>
                             <h3>{facetDefinitions[facet]?.label ?? facet}</h3>
                             {
-                                productsResult?.facets?.[facet]?.terms?.map((term, index) => (
+                                (productsResult?.facets?.[facet] as TermFacetResult)?.terms?.map((term, index) => (
                                     <div key={term.term}>
                                         <input
                                             onChange={(event) => {

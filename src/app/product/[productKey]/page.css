@@ -1,0 +1,17 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    margin-top: 20px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.attributes-container {
+    display: flex;
+    gap: 10px;
+}

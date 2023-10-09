@@ -3,7 +3,7 @@ import {AUTH_HOST, CLIENT_ID, CLIENT_SECRET} from "../../constants";
 
 const handleError = async (error: AxiosError): Promise<AxiosRequestConfig | void> => {
     const originalRequest = error.config;
-    console.log('handleResponse')
+
     if (error.response?.status === 401 || error.response?.status === 405) {
         const token = await getAuthToken();
 
@@ -15,7 +15,6 @@ const handleError = async (error: AxiosError): Promise<AxiosRequestConfig | void
 
 const handleRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
     const token = localStorage.getItem('ct_access_token');
-    console.log('handleRequest')
     if (token && config && config.headers) {
         config.headers['Authorization'] = `Bearer ${token}`;
     }
