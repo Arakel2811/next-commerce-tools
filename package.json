@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@commercetools/platform-sdk": "^6.0.0",
     "axios": "^1.5.1",
     "next": "13.5.4",
     "react": "^18",

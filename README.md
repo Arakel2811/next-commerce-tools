@@ -16,21 +16,20 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## About
 
-To learn more about Next.js, take a look at the following resources:
+This project is using NextJS to create an e-commerce frontend that's integrated with commercetools.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We authenticate to commercetools using Client Credentials Flow. This means that we need to provide a client ID and a client secret to get an access token. This access token is then used to make requests to commercetools.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We have a PLP(Product Listing Page) and a PDP (Product Detail Page). The PLP shows a list of products and the PDP shows a single product.
 
-## Deploy on Vercel
+PLP has facets that can be used to filter products. The facets are fetched from commercetools and are dynamically calculated.
+It also has free-text search that can be used to search for products. The search is done on the commercetools backend and the results are returned to the frontend.
+We use Product Projections search endpoint for PLP.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+PDP shows product details and has a variant selector. The variant selector is dynamically calculated based on the product attributes data.

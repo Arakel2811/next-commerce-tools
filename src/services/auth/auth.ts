@@ -25,6 +25,7 @@ const handleRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequest
 
 export const initializeRequestInterceptor = () => {
     axios.interceptors.request.use(handleRequest);
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 };
 
 export const initializeResponseInterceptor = () => {
